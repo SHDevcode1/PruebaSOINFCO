@@ -1,0 +1,25 @@
+<section class="container">
+        <article class="table-container">
+                <h1>Tabla Usuarios API</h1>
+                <table class="table table-responsive">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Avatar</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let user of users" scope="row">
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.role }}</td>
+                    <td><img [src]="user.avatar" alt="Avatar"></td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
+</section>
